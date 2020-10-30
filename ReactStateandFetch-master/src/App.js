@@ -22,14 +22,16 @@ const App = (props) => {
       setlabels([...data]);
     });
   }
+
+  let interval = setInterval(() => {}, 3000);
   useEffect(() => {
     getData();
-    const interval = setInterval(() => {
+    clearInterval(interval)
+    interval = setInterval(() => {
       getData()
     }, 3000)
     return () => {
       clearInterval(interval)
-      alert(name)
     }
   }, [name]);
 
