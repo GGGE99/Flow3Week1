@@ -19,7 +19,9 @@ export default function AllPersons(props) {
               <td>{person.gender}</td>
               <td>{person.email}</td>
               <td>
-                <a href="#" onClick={(e)=>{e.preventDefault();editPerson(person)}}>edit</a> / <a href="#" onClick={(e)=>{e.preventDefault();deletePerson(person.id)}}>delete</a>
+                <a href="#" onClick={(e)=>{e.preventDefault();editPerson(person)}}>edit</a> 
+                / 
+                <a href="#" onClick={(e)=>{e.preventDefault();deletePerson(person.id)}}>delete</a>
               </td>
             </tr> 
           )}
